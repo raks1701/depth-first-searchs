@@ -73,6 +73,37 @@ F H <BR>
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
 
 <hr>
+<h3>Program</h3>
+<hr>
+
+```
+# DFS Traversal
+
+def dfs(g, n, v):
+    v.append(n)
+    for i in g[n]:
+        if i not in v:
+            dfs(g, i, v)
+    return v
+
+graph = {
+'A':['B','C'],
+'B':['A','E','D'],
+'C':['A','D','G'],
+'D':['B','C','F'],
+'E':['B'],
+'F':['D','G','H'],
+'G':['C','F'],
+'H':['F']
+}
+
+print(dfs(graph,'A',[]))
+```
+<hr>
+<h3>Output</h3>
+```
+<img width="649" height="47" alt="image" src="https://github.com/user-attachments/assets/958eca02-87b7-4c50-935b-c43702438b10" />
+```
 
 <hr>
 <h3>Sample Input</h3>
@@ -88,7 +119,37 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 
+
 <hr>
+<h3>Program</h3>
+<hr>
+
+```
+# DFS Traversal
+
+def dfs(g, n, v):
+    v.append(n)
+    for i in g[n]:
+        if i not in v:
+            dfs(g, i, v)
+    return v
+
+graph = {
+'0':['1','2','3'],
+'1':['0'],
+'2':['0','3','4'],
+'3':['0','2'],
+'4':['2']
+}
+
+print(dfs(graph,'0',[]))
+```
+<hr>
+<h3>Output</h3>
+```
+<img width="402" height="45" alt="image" src="https://github.com/user-attachments/assets/94ca337a-87b6-4bd9-9dbf-28a5c381d181" />
+```
+
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Depth First Search for the same graph was done successfully.</p>
